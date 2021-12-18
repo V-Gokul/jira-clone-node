@@ -1,0 +1,103 @@
+//EPIC
+GET http://localhost:3000/api/v1/epics
+# Authorization: Basic Z28yOnBhc3M=
+Authorization: Basic Z28yOnBhc3M=
+
+###
+POST http://localhost:3000/api/v1/epics
+Content-Type: application/json
+# Authorization: Basic Z28yOnBhc3M=
+
+{
+    "name":" team 10 "
+
+} 
+###
+GET http://localhost:3000/api/v1/epics/8 
+# Authorization: 1
+###
+PUT http://localhost:3000/api/v1/epics/1
+Content-Type: application/json
+Authorization: 1
+
+{
+    "name":"epic 1.1 dong"
+}
+###
+DELETE http://localhost:3000/api/v1/epics/4
+Authorization: 4
+###
+
+
+//CATEGORIES
+GET http://localhost:3000/api/v1/categories
+# Authorization: Basic Z28zOnBhc3M=
+###
+POST http://localhost:3000/api/v1/categories
+Content-Type: application/json
+# Authorization: Basic Z28zOnBhc3M=
+
+{
+  "name":" oooo  ",
+  "epic_id":5
+}
+###
+GET http://localhost:3000/api/v1/categories/3
+# Authorization: 1
+###
+DELETE  http://localhost:3000/api/v1/categories/1
+###
+Put http://localhost:3000/api/v1/categories/5
+Content-Type: application/json
+# Authorization: 1
+
+{
+  "name":"barbarian queen"
+}
+###
+
+
+//ITEMS
+GET http://localhost:3000/api/v1/items
+# Authorization: Basic  Z28zOnBhc3M=
+###
+POST http://localhost:3000/api/v1/items
+Content-Type: application/json
+# Authorization: Basic  Z28zOnBhc3M=
+
+{
+  "name":"doll",
+  "category_id":1
+}
+###
+GET http://localhost:3000/api/v1/items/6
+###
+DELETE http://localhost:3000/api/v1/items/10
+###
+PUT http://localhost:3000/api/v1/items/5
+Content-Type: application/json
+
+{
+  "name":"item 1.5",
+  "category_id":1
+}
+###
+
+POST http://localhost:3000/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "username": "go3",
+  "password": "pass"
+}
+
+###
+
+POST  http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "go1",
+  "password": "pass"
+}
+###
